@@ -10,7 +10,7 @@ go run main.go
 
 //creating dependency file
 go mod init blog.com
-//Packages
+//*******Packages******************//
 go get github.com/gin-gonic/gin
 go get github.com/gin-contrib/cors
 go get github.com/joho/godotenv
