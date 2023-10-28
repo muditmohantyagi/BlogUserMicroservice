@@ -104,7 +104,7 @@ func (con UserController) Login(c *gin.Context) {
 	c.JSON(http.StatusOK, response)
 }
 
-// logout
+// logout..
 func (con UserController) Logout(c *gin.Context) {
 	user_id := service.GetUserID(c.GetHeader("Token"))
 
