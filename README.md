@@ -17,3 +17,5 @@ go get github.com/joho/godotenv
 go get gorm.io/driver/mysql
 go get gorm.io/gorm
 go get github.com/spf13/cobra
+go get go.uber.org/zap
+go get github.com/dgrijalva/jwt-go

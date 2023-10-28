@@ -1,0 +1,6 @@
+{"level":"ERROR","time":"2023-10-28T18:44:48.503+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
+{"level":"ERROR","time":"2023-10-28T18:47:16.046+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
+{"level":"ERROR","time":"2023-10-28T18:48:26.243+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
+{"level":"ERROR","time":"2023-10-28T18:50:09.359+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
+{"level":"ERROR","time":"2023-10-28T18:52:44.388+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
+{"level":"ERROR","time":"2023-10-28T18:53:02.797+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
