@@ -52,6 +52,7 @@ func SetupRouter() *gin.Engine {
 	{
 		var UserController = new(controller.UserController)
 		userAuth.POST("/logout", UserController.Logout)
+		userAuth.POST("/edit", UserController.Edit)
 	}
 
 	return r

@@ -117,3 +117,31 @@ func (con UserController) Logout(c *gin.Context) {
 	response := helper.Success(true, "ok", "logout successfull")
 	c.JSON(http.StatusOK, response)
 }
+func (con UserController) Edit(c *gin.Context) {
+	var InputDTO dto.Edit
+	if errDTO := c.ShouldBindJSON(&InputDTO); errDTO != nil {
+		msg := handle.Error(errDTO)
+		c.AbortWithStatusJSON(http.StatusBadRequest, msg)
+		return
+	}
+	pass_byte, err := bcrypt.GenerateFromPassword([]byte(InputDTO.Password), 10)
+	if err != nil {
+		helper.ELog.Error(err.Error())
+		response := helper.Error("Encription error", err.Error(), helper.EmptyObj{})
+		c.JSON(http.StatusBadRequest, response)
+		return
+	}
+	var user model.User
+	user.Name = InputDTO.Name
+	user.Email = InputDTO.Email
+	user.Password = string(pass_byte)
+	user_id := service.GetUserID(c.GetHeader("Token"))
+	if _, err := model.UserEditByID(user, user_id); err != nil {
+		helper.ELog.Error(err.Error())
+		response := helper.Error("Mysql error", err.Error(), helper.EmptyObj{})
+		c.JSON(http.StatusBadRequest, response)
+		return
+	}
+	response := helper.Success(true, "ok", "Update is successfull")
+	c.JSON(http.StatusOK, response)
+}

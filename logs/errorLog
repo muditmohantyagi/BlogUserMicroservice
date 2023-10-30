@@ -4,3 +4,5 @@
 {"level":"ERROR","time":"2023-10-28T18:50:09.359+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
 {"level":"ERROR","time":"2023-10-28T18:52:44.388+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
 {"level":"ERROR","time":"2023-10-28T18:53:02.797+0530","callerKey":"controller/UserController.go:98","message":"WHERE conditions required"}
+{"level":"ERROR","time":"2023-10-30T19:09:35.688+0530","callerKey":"middleware/JwtAuth.go:43","message":"PANIC:attack on website"}
+{"level":"ERROR","time":"2023-10-30T19:35:55.927+0530","callerKey":"controller/UserController.go:140","message":"Error 1062 (23000): Duplicate entry 'admin@gmail.com' for key 'email'"}

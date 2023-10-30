@@ -52,3 +52,12 @@ func UpdateToken(UserId uint, JwtToken string) (bool, error) {
 		return false, errors.New("User not found")
 	}
 }
+func UserEditByID(user User, user_id uint) (bool, error) {
+	if result := db.Model(&User{}).Where("id=?", user_id).Updates(&user); result.Error != nil {
+		return false, result.Error
+	} else if result.RowsAffected == 0 {
+		err := errors.New("Invalid id")
+		return false, err
+	}
+	return true, nil
+}
